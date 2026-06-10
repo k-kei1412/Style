@@ -223,7 +223,7 @@ function updateApiKeyLabel() {
 function switchTab(name) {
   state.activeTab = name;
   document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
-  document.getElementById(`${name}Tab`).classList.remove('hidden');
+  document.getElementById(`${name}Tab`).style.display = 'block';
   document.querySelectorAll('.nav-tab').forEach(btn => {
     const active = btn.dataset.tab === name;
     btn.classList.toggle('active-tab', active);
@@ -325,7 +325,7 @@ function handleFiles(files) {
 
   const preview = document.getElementById('uploadPreview');
   const row     = document.getElementById('previewRow');
-  preview.classList.remove('hidden');
+  preview.style.display = 'block';
   row.innerHTML = '';
   state.pendingFiles.forEach(f => {
     const img = document.createElement('img');
@@ -362,7 +362,7 @@ async function runAnalysis() {
 
   hideLoading();
   state.pendingFiles = [];
-  document.getElementById('uploadPreview').classList.add('hidden');
+  document.getElementById('uploadPreview').style.display = 'none';
   document.getElementById('imageUpload').value = '';
   renderGrid();
 
@@ -399,12 +399,12 @@ function renderGrid() {
   const empty = document.getElementById('emptyCloset');
 
   if (!filtered.length) {
-    grid.classList.add('hidden');
-    empty.classList.remove('hidden');
+    grid.style.display = 'none';
+    empty.style.display = 'block';
     return;
   }
-  empty.classList.add('hidden');
-  grid.classList.remove('hidden');
+  empty.style.display = 'none';
+  grid.style.display = 'grid';
 
   grid.innerHTML = filtered.map(item => `
     <div class="clothes-card" data-id="${item.id}">
