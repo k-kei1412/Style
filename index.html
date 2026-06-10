@@ -188,7 +188,7 @@
     </div>
 
     <!-- ── CLOSET TAB ── -->
-    <div id="closetTab" class="tab-content hidden space-y-4">
+    <div id="closetTab" class="tab-content space-y-4" style="display:none">
 
       <!-- Upload -->
       <div class="card">
@@ -200,7 +200,7 @@
           <p class="text-sm font-medium text-gray-600">クリックまたはドラッグで画像をアップロード</p>
           <p class="text-xs text-gray-400 mt-1">AIが服の種類・色・素材・季節を自動分析します</p>
         </div>
-        <div id="uploadPreview" class="hidden mt-4">
+        <div id="uploadPreview" class="mt-4" style="display:none">
           <div id="previewRow" class="flex gap-3 overflow-x-auto pb-1"></div>
           <button id="analyzeBtn" class="btn-primary w-full mt-3">
             <i class="fas fa-magic mr-2"></i>AIで分析してクローゼットに追加
@@ -216,7 +216,7 @@
         </div>
         <div id="filterRow" class="flex gap-2 overflow-x-auto pb-2 mb-4 no-scrollbar"></div>
         <div id="clothesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
-        <div id="emptyCloset" class="text-center py-14 text-gray-300">
+        <div id="emptyCloset" class="text-center py-14 text-gray-300" style="display:none">
           <div class="text-5xl mb-3">👔</div>
           <p class="text-sm">まだ服が登録されていません</p>
         </div>
@@ -224,7 +224,7 @@
     </div>
 
     <!-- ── COORDINATE TAB ── -->
-    <div id="coordinateTab" class="tab-content hidden space-y-4">
+    <div id="coordinateTab" class="tab-content space-y-4" style="display:none">
 
       <div class="card">
         <h2 class="section-title"><i class="fas fa-sparkles mr-2 text-violet-500"></i>コーディネート条件</h2>
@@ -258,7 +258,7 @@
         </button>
       </div>
 
-      <div id="coordResults" class="hidden"></div>
+      <div id="coordResults" style="display:none"></div>
     </div>
 
   </main>
